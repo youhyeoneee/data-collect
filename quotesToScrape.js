@@ -1,5 +1,6 @@
 import axios from "axios";
 import * as cheerio from "cheerio";
+import fs from "fs";
 
 const baseUrl = "https://quotes.toscrape.com";
 let page = "/page/1";
@@ -66,7 +67,8 @@ async function getPageData(url) {
         if (next) {
             getPageData(baseUrl + next); // 재귀 호출
         }
-        console.log(quotes);
+
+        fs.writeFileSync("./data/quote.json", JSON.stringify(quotes));
     }
 }
 
