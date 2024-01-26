@@ -27,8 +27,6 @@ async function getAuthorDetail(result) {
             description: desc,
         };
     }
-
-    return result;
 }
 
 async function getPageData(url) {
@@ -41,6 +39,7 @@ async function getPageData(url) {
             $("div.quote")
                 .map(async (i, el) => {
                     const target = $(el);
+
                     const tags = [];
                     target.find(".tag").map((i, el) => {
                         tags.push($(el).text());
@@ -56,7 +55,8 @@ async function getPageData(url) {
                         authorUrl: authorUrl,
                         tags: tags,
                     };
-                    const authorDetail = await getAuthorDetail(result); // 여기 await 추가
+
+                    await getAuthorDetail(result); // 여기 await 추가
 
                     return result;
                 })
