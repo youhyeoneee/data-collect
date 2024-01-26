@@ -1,14 +1,41 @@
 import axios from "axios";
 import * as cheerio from "cheerio";
 import fs from "fs";
+import iconv from "iconv-lite";
 
 async function fetchPage(url) {
     try {
-        const response = await axios.get(url);
+        const header = arguments[1];
+        let response;
+        if (header) {
+            response = await axios.get(url, header);
+        } else {
+            response = await axios.get(url);
+        }
+
         return response;
     } catch (error) {
         console.error(`Error fetching page: ${url}`, error.message);
         return null;
+    }
+}
+
+async function getNewsDetail(result) {
+    const header = { responseType: "arraybuffer" };
+    const response = await fetchPage(result.link, header);
+
+    if (response) {
+        let contentType = response.headers["content-type"];
+        let charset = contentType.includes("charset=")
+            ? contentType.split("charset=")[1]
+            : "UTF-8";
+
+        let responseData = await response.data;
+
+        let data = iconv.decode(responseData, charset);
+
+        const $ = await cheerio.load(data);
+        result.newsDetail = $.html();
     }
 }
 
@@ -63,6 +90,8 @@ async function getNewsInfo(url) {
                         img: img,
                         link: link,
                     };
+
+                    await getNewsDetail(result);
 
                     return result;
                 })
