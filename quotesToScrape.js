@@ -2,14 +2,21 @@ import axios from "axios";
 import * as cheerio from "cheerio";
 
 const baseUrl = "https://quotes.toscrape.com";
-let results = [];
 let page = "/page/1";
-let flag = true;
+
+async function fetchPage(url) {
+    try {
+        const response = await axios.get(url);
+        return response;
+    } catch (error) {
+        console.error(`Error fetching page: ${url}`, error.message);
+        return null;
+    }
+}
 
 async function getAuthorDetail(result) {
-    // 여기 await 추가 -> pending
-    const response = await axios.get(result.authorUrl);
-    if (response.status) {
+    const response = await fetchPage(result.authorUrl);
+    if (response) {
         const $ = cheerio.load(response.data);
         const bornDate = $(".author-born-date").text();
         const bornLocation = $(".author-born-location").text();
@@ -20,14 +27,14 @@ async function getAuthorDetail(result) {
             description: desc,
         };
     }
+
     return result;
 }
 
 async function getPageData(url) {
-    console.log(url, "=====================");
-    const response = await axios.get(url);
-
-    if (response.status == 200) {
+    const response = await fetchPage(url);
+    if (response) {
+        console.log(url, "=====================");
         const $ = cheerio.load(response.data);
         // 여기 await, Promise.all 추가
         const quotes = await Promise.all(
@@ -58,8 +65,6 @@ async function getPageData(url) {
         const next = $(".next a").prop("href");
         if (next) {
             getPageData(baseUrl + next); // 재귀 호출
-        } else {
-            flag = true;
         }
         console.log(quotes);
     }
