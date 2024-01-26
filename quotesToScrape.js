@@ -1,15 +1,15 @@
 import axios from "axios";
 import * as cheerio from "cheerio";
 
-const baseUrl = "https://quotes.toscrape.com/";
+const baseUrl = "https://quotes.toscrape.com";
 const results = [];
-const maxPage = 2;
+let page = "/page/1";
+let flag = true;
 
-for (let page = 1; page <= maxPage; page++) {
-    const url = baseUrl + `page/${page}`;
+async function getPageData(url) {
+    console.log(url, "=====================");
     axios.get(url).then((response) => {
         const $ = cheerio.load(response.data);
-        // console.log($.html());
         const quotes = $("div.quote")
             .map((i, el) => {
                 const target = $(el);
@@ -21,12 +21,21 @@ for (let page = 1; page <= maxPage; page++) {
                 return {
                     quote: target.children(".text").text(),
                     author: target.find(".author").text(),
-                    authorUrl: url + target.find("a").prop("href"),
+                    authorUrl: baseUrl + target.find("a").prop("href"),
                     tag: tags,
                 };
             })
             .get();
-        console.log(`${page} 페이지 ----------`);
+
+        const next = $(".next a").prop("href");
+        if (next) {
+            getPageData(baseUrl + next); // 재귀 호출
+        } else {
+            flag = true;
+        }
         console.log(quotes);
     });
 }
+
+const url = baseUrl + page;
+getPageData(url);
