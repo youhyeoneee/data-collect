@@ -1,0 +1,902 @@
+[
+    {
+        "date": "2024.01.29",
+        "closingPrice": "74,400",
+        "priceDifference": "1,000",
+        "openingPrice": "73,800",
+        "highPrice": "74,800",
+        "lowPrice": "73,500",
+        "tradingVolume": "6,348,162"
+    },
+    {
+        "date": "2024.01.26",
+        "closingPrice": "73,400",
+        "priceDifference": "700",
+        "openingPrice": "73,700",
+        "highPrice": "74,500",
+        "lowPrice": "73,300",
+        "tradingVolume": "11,160,062"
+    },
+    {
+        "date": "2024.01.25",
+        "closingPrice": "74,100",
+        "priceDifference": "100",
+        "openingPrice": "74,200",
+        "highPrice": "74,800",
+        "lowPrice": "73,700",
+        "tradingVolume": "11,737,747"
+    },
+    {
+        "date": "2024.01.24",
+        "closingPrice": "74,000",
+        "priceDifference": "1,200",
+        "openingPrice": "75,200",
+        "highPrice": "75,200",
+        "lowPrice": "73,500",
+        "tradingVolume": "12,860,661"
+    },
+    {
+        "date": "2024.01.23",
+        "closingPrice": "75,200",
+        "priceDifference": "100",
+        "openingPrice": "75,700",
+        "highPrice": "75,800",
+        "lowPrice": "74,300",
+        "tradingVolume": "14,786,224"
+    },
+    {
+        "date": "2024.01.22",
+        "closingPrice": "75,100",
+        "priceDifference": "400",
+        "openingPrice": "75,900",
+        "highPrice": "76,000",
+        "lowPrice": "75,000",
+        "tradingVolume": "19,673,375"
+    },
+    {
+        "date": "2024.01.19",
+        "closingPrice": "74,700",
+        "priceDifference": "3,000",
+        "openingPrice": "73,500",
+        "highPrice": "74,700",
+        "lowPrice": "73,000",
+        "tradingVolume": "23,363,427"
+    },
+    {
+        "date": "2024.01.18",
+        "closingPrice": "71,700",
+        "priceDifference": "700",
+        "openingPrice": "71,600",
+        "highPrice": "72,000",
+        "lowPrice": "70,700",
+        "tradingVolume": "17,853,397"
+    },
+    {
+        "date": "2024.01.17",
+        "closingPrice": "71,000",
+        "priceDifference": "1,600",
+        "openingPrice": "73,100",
+        "highPrice": "73,300",
+        "lowPrice": "71,000",
+        "tradingVolume": "22,683,660"
+    },
+    {
+        "date": "2024.01.16",
+        "closingPrice": "72,600",
+        "priceDifference": "1,300",
+        "openingPrice": "73,500",
+        "highPrice": "73,700",
+        "lowPrice": "72,500",
+        "tradingVolume": "14,760,415"
+    },
+    {
+        "date": "2024.01.15",
+        "closingPrice": "73,900",
+        "priceDifference": "800",
+        "openingPrice": "73,200",
+        "highPrice": "74,000",
+        "lowPrice": "73,200",
+        "tradingVolume": "13,212,339"
+    },
+    {
+        "date": "2024.01.12",
+        "closingPrice": "73,100",
+        "priceDifference": "100",
+        "openingPrice": "73,000",
+        "highPrice": "74,100",
+        "lowPrice": "72,800",
+        "tradingVolume": "13,038,939"
+    },
+    {
+        "date": "2024.01.11",
+        "closingPrice": "73,200",
+        "priceDifference": "400",
+        "openingPrice": "72,900",
+        "highPrice": "73,600",
+        "lowPrice": "72,700",
+        "tradingVolume": "57,691,266"
+    },
+    {
+        "date": "2024.01.10",
+        "closingPrice": "73,600",
+        "priceDifference": "1,100",
+        "openingPrice": "75,000",
+        "highPrice": "75,200",
+        "lowPrice": "73,200",
+        "tradingVolume": "20,259,529"
+    },
+    {
+        "date": "2024.01.09",
+        "closingPrice": "74,700",
+        "priceDifference": "1,800",
+        "openingPrice": "77,400",
+        "highPrice": "77,700",
+        "lowPrice": "74,300",
+        "tradingVolume": "26,019,249"
+    },
+    {
+        "date": "2024.01.08",
+        "closingPrice": "76,500",
+        "priceDifference": "100",
+        "openingPrice": "77,000",
+        "highPrice": "77,500",
+        "lowPrice": "76,400",
+        "tradingVolume": "11,088,724"
+    },
+    {
+        "date": "2024.01.05",
+        "closingPrice": "76,600",
+        "priceDifference": "0",
+        "openingPrice": "76,700",
+        "highPrice": "77,100",
+        "lowPrice": "76,400",
+        "tradingVolume": "11,304,316"
+    },
+    {
+        "date": "2024.01.04",
+        "closingPrice": "76,600",
+        "priceDifference": "400",
+        "openingPrice": "76,100",
+        "highPrice": "77,300",
+        "lowPrice": "76,100",
+        "tradingVolume": "15,324,439"
+    },
+    {
+        "date": "2024.01.03",
+        "closingPrice": "77,000",
+        "priceDifference": "2,600",
+        "openingPrice": "78,500",
+        "highPrice": "78,800",
+        "lowPrice": "77,000",
+        "tradingVolume": "21,753,644"
+    },
+    {
+        "date": "2024.01.02",
+        "closingPrice": "79,600",
+        "priceDifference": "1,100",
+        "openingPrice": "78,200",
+        "highPrice": "79,800",
+        "lowPrice": "78,200",
+        "tradingVolume": "17,142,847"
+    },
+    {
+        "date": "2023.12.28",
+        "closingPrice": "78,500",
+        "priceDifference": "500",
+        "openingPrice": "77,700",
+        "highPrice": "78,500",
+        "lowPrice": "77,500",
+        "tradingVolume": "17,797,536"
+    },
+    {
+        "date": "2023.12.27",
+        "closingPrice": "78,000",
+        "priceDifference": "1,400",
+        "openingPrice": "76,700",
+        "highPrice": "78,000",
+        "lowPrice": "76,500",
+        "tradingVolume": "20,651,042"
+    },
+    {
+        "date": "2023.12.26",
+        "closingPrice": "76,600",
+        "priceDifference": "700",
+        "openingPrice": "76,100",
+        "highPrice": "76,700",
+        "lowPrice": "75,700",
+        "tradingVolume": "13,164,909"
+    },
+    {
+        "date": "2023.12.22",
+        "closingPrice": "75,900",
+        "priceDifference": "900",
+        "openingPrice": "75,800",
+        "highPrice": "76,300",
+        "lowPrice": "75,400",
+        "tradingVolume": "14,515,608"
+    },
+    {
+        "date": "2023.12.21",
+        "closingPrice": "75,000",
+        "priceDifference": "200",
+        "openingPrice": "74,600",
+        "highPrice": "75,000",
+        "lowPrice": "74,300",
+        "tradingVolume": "13,478,766"
+    },
+    {
+        "date": "2023.12.20",
+        "closingPrice": "74,800",
+        "priceDifference": "1,400",
+        "openingPrice": "74,200",
+        "highPrice": "74,900",
+        "lowPrice": "73,800",
+        "tradingVolume": "16,870,156"
+    },
+    {
+        "date": "2023.12.19",
+        "closingPrice": "73,400",
+        "priceDifference": "500",
+        "openingPrice": "73,000",
+        "highPrice": "73,400",
+        "lowPrice": "72,800",
+        "tradingVolume": "8,907,632"
+    },
+    {
+        "date": "2023.12.18",
+        "closingPrice": "72,900",
+        "priceDifference": "400",
+        "openingPrice": "73,300",
+        "highPrice": "73,400",
+        "lowPrice": "72,800",
+        "tradingVolume": "9,690,551"
+    },
+    {
+        "date": "2023.12.15",
+        "closingPrice": "73,300",
+        "priceDifference": "200",
+        "openingPrice": "73,800",
+        "highPrice": "74,000",
+        "lowPrice": "73,200",
+        "tradingVolume": "15,419,815"
+    },
+    {
+        "date": "2023.12.14",
+        "closingPrice": "73,100",
+        "priceDifference": "300",
+        "openingPrice": "74,100",
+        "highPrice": "74,300",
+        "lowPrice": "72,500",
+        "tradingVolume": "27,567,593"
+    },
+    {
+        "date": "2023.12.13",
+        "closingPrice": "72,800",
+        "priceDifference": "700",
+        "openingPrice": "73,300",
+        "highPrice": "73,500",
+        "lowPrice": "72,800",
+        "tradingVolume": "13,116,766"
+    },
+    {
+        "date": "2023.12.12",
+        "closingPrice": "73,500",
+        "priceDifference": "500",
+        "openingPrice": "73,300",
+        "highPrice": "73,500",
+        "lowPrice": "73,100",
+        "tradingVolume": "13,758,646"
+    },
+    {
+        "date": "2023.12.11",
+        "closingPrice": "73,000",
+        "priceDifference": "400",
+        "openingPrice": "72,800",
+        "highPrice": "73,000",
+        "lowPrice": "72,200",
+        "tradingVolume": "9,861,960"
+    },
+    {
+        "date": "2023.12.08",
+        "closingPrice": "72,600",
+        "priceDifference": "1,100",
+        "openingPrice": "72,100",
+        "highPrice": "72,800",
+        "lowPrice": "71,900",
+        "tradingVolume": "10,859,463"
+    },
+    {
+        "date": "2023.12.07",
+        "closingPrice": "71,500",
+        "priceDifference": "200",
+        "openingPrice": "71,800",
+        "highPrice": "71,900",
+        "lowPrice": "71,100",
+        "tradingVolume": "8,862,017"
+    },
+    {
+        "date": "2023.12.06",
+        "closingPrice": "71,700",
+        "priceDifference": "500",
+        "openingPrice": "71,800",
+        "highPrice": "72,100",
+        "lowPrice": "71,600",
+        "tradingVolume": "8,123,087"
+    },
+    {
+        "date": "2023.12.05",
+        "closingPrice": "71,200",
+        "priceDifference": "1,400",
+        "openingPrice": "72,300",
+        "highPrice": "72,400",
+        "lowPrice": "71,200",
+        "tradingVolume": "12,129,682"
+    },
+    {
+        "date": "2023.12.04",
+        "closingPrice": "72,600",
+        "priceDifference": "600",
+        "openingPrice": "72,800",
+        "highPrice": "72,900",
+        "lowPrice": "72,400",
+        "tradingVolume": "10,229,267"
+    },
+    {
+        "date": "2023.12.01",
+        "closingPrice": "72,000",
+        "priceDifference": "800",
+        "openingPrice": "72,400",
+        "highPrice": "72,500",
+        "lowPrice": "71,700",
+        "tradingVolume": "9,871,284"
+    },
+    {
+        "date": "2023.11.30",
+        "closingPrice": "72,800",
+        "priceDifference": "100",
+        "openingPrice": "72,700",
+        "highPrice": "72,800",
+        "lowPrice": "72,200",
+        "tradingVolume": "15,783,714"
+    },
+    {
+        "date": "2023.11.29",
+        "closingPrice": "72,700",
+        "priceDifference": "0",
+        "openingPrice": "72,400",
+        "highPrice": "72,800",
+        "lowPrice": "72,200",
+        "tradingVolume": "9,283,933"
+    },
+    {
+        "date": "2023.11.28",
+        "closingPrice": "72,700",
+        "priceDifference": "1,400",
+        "openingPrice": "71,400",
+        "highPrice": "72,700",
+        "lowPrice": "71,300",
+        "tradingVolume": "13,283,081"
+    },
+    {
+        "date": "2023.11.27",
+        "closingPrice": "71,300",
+        "priceDifference": "400",
+        "openingPrice": "71,500",
+        "highPrice": "72,100",
+        "lowPrice": "71,100",
+        "tradingVolume": "9,113,857"
+    },
+    {
+        "date": "2023.11.24",
+        "closingPrice": "71,700",
+        "priceDifference": "700",
+        "openingPrice": "72,400",
+        "highPrice": "72,600",
+        "lowPrice": "71,700",
+        "tradingVolume": "6,676,685"
+    },
+    {
+        "date": "2023.11.23",
+        "closingPrice": "72,400",
+        "priceDifference": "400",
+        "openingPrice": "73,000",
+        "highPrice": "73,200",
+        "lowPrice": "72,200",
+        "tradingVolume": "6,775,614"
+    },
+    {
+        "date": "2023.11.22",
+        "closingPrice": "72,800",
+        "priceDifference": "0",
+        "openingPrice": "72,200",
+        "highPrice": "73,000",
+        "lowPrice": "71,900",
+        "tradingVolume": "11,105,143"
+    },
+    {
+        "date": "2023.11.21",
+        "closingPrice": "72,800",
+        "priceDifference": "100",
+        "openingPrice": "73,100",
+        "highPrice": "73,400",
+        "lowPrice": "72,700",
+        "tradingVolume": "9,712,881"
+    },
+    {
+        "date": "2023.11.20",
+        "closingPrice": "72,700",
+        "priceDifference": "200",
+        "openingPrice": "72,100",
+        "highPrice": "73,000",
+        "lowPrice": "72,100",
+        "tradingVolume": "10,610,157"
+    },
+    {
+        "date": "2023.11.17",
+        "closingPrice": "72,500",
+        "priceDifference": "300",
+        "openingPrice": "72,300",
+        "highPrice": "73,000",
+        "lowPrice": "72,300",
+        "tradingVolume": "11,494,644"
+    },
+    {
+        "date": "2023.11.16",
+        "closingPrice": "72,800",
+        "priceDifference": "600",
+        "openingPrice": "72,500",
+        "highPrice": "73,000",
+        "lowPrice": "72,300",
+        "tradingVolume": "15,860,451"
+    },
+    {
+        "date": "2023.11.15",
+        "closingPrice": "72,200",
+        "priceDifference": "1,400",
+        "openingPrice": "71,600",
+        "highPrice": "72,200",
+        "lowPrice": "71,500",
+        "tradingVolume": "20,148,677"
+    },
+    {
+        "date": "2023.11.14",
+        "closingPrice": "70,800",
+        "priceDifference": "400",
+        "openingPrice": "71,000",
+        "highPrice": "71,100",
+        "lowPrice": "70,600",
+        "tradingVolume": "9,567,984"
+    },
+    {
+        "date": "2023.11.13",
+        "closingPrice": "70,400",
+        "priceDifference": "100",
+        "openingPrice": "71,300",
+        "highPrice": "71,300",
+        "lowPrice": "70,300",
+        "tradingVolume": "9,246,919"
+    },
+    {
+        "date": "2023.11.10",
+        "closingPrice": "70,500",
+        "priceDifference": "200",
+        "openingPrice": "70,000",
+        "highPrice": "70,500",
+        "lowPrice": "69,500",
+        "tradingVolume": "9,684,347"
+    },
+    {
+        "date": "2023.11.09",
+        "closingPrice": "70,300",
+        "priceDifference": "400",
+        "openingPrice": "69,900",
+        "highPrice": "70,800",
+        "lowPrice": "69,600",
+        "tradingVolume": "12,301,373"
+    },
+    {
+        "date": "2023.11.08",
+        "closingPrice": "69,900",
+        "priceDifference": "1,000",
+        "openingPrice": "71,300",
+        "highPrice": "71,400",
+        "lowPrice": "69,700",
+        "tradingVolume": "12,901,310"
+    },
+    {
+        "date": "2023.11.07",
+        "closingPrice": "70,900",
+        "priceDifference": "0",
+        "openingPrice": "70,600",
+        "highPrice": "70,900",
+        "lowPrice": "70,000",
+        "tradingVolume": "17,228,731"
+    },
+    {
+        "date": "2023.11.06",
+        "closingPrice": "70,900",
+        "priceDifference": "1,300",
+        "openingPrice": "69,800",
+        "highPrice": "70,900",
+        "lowPrice": "69,300",
+        "tradingVolume": "22,228,489"
+    },
+    {
+        "date": "2023.11.03",
+        "closingPrice": "69,600",
+        "priceDifference": "100",
+        "openingPrice": "69,700",
+        "highPrice": "70,200",
+        "lowPrice": "69,500",
+        "tradingVolume": "10,322,234"
+    },
+    {
+        "date": "2023.11.02",
+        "closingPrice": "69,700",
+        "priceDifference": "1,100",
+        "openingPrice": "70,000",
+        "highPrice": "70,000",
+        "lowPrice": "69,400",
+        "tradingVolume": "16,350,031"
+    },
+    {
+        "date": "2023.11.01",
+        "closingPrice": "68,600",
+        "priceDifference": "1,700",
+        "openingPrice": "67,500",
+        "highPrice": "68,900",
+        "lowPrice": "67,300",
+        "tradingVolume": "13,775,256"
+    },
+    {
+        "date": "2023.10.31",
+        "closingPrice": "66,900",
+        "priceDifference": "400",
+        "openingPrice": "67,600",
+        "highPrice": "68,300",
+        "lowPrice": "66,900",
+        "tradingVolume": "14,488,892"
+    },
+    {
+        "date": "2023.10.30",
+        "closingPrice": "67,300",
+        "priceDifference": "0",
+        "openingPrice": "66,800",
+        "highPrice": "67,800",
+        "lowPrice": "66,700",
+        "tradingVolume": "10,139,270"
+    },
+    {
+        "date": "2023.10.27",
+        "closingPrice": "67,300",
+        "priceDifference": "600",
+        "openingPrice": "67,100",
+        "highPrice": "67,300",
+        "lowPrice": "66,700",
+        "tradingVolume": "11,334,726"
+    },
+    {
+        "date": "2023.10.26",
+        "closingPrice": "66,700",
+        "priceDifference": "1,300",
+        "openingPrice": "67,000",
+        "highPrice": "67,900",
+        "lowPrice": "66,700",
+        "tradingVolume": "15,517,624"
+    },
+    {
+        "date": "2023.10.25",
+        "closingPrice": "68,000",
+        "priceDifference": "500",
+        "openingPrice": "68,800",
+        "highPrice": "68,800",
+        "lowPrice": "67,900",
+        "tradingVolume": "10,610,703"
+    },
+    {
+        "date": "2023.10.24",
+        "closingPrice": "68,500",
+        "priceDifference": "100",
+        "openingPrice": "68,700",
+        "highPrice": "68,800",
+        "lowPrice": "67,700",
+        "tradingVolume": "12,791,710"
+    },
+    {
+        "date": "2023.10.23",
+        "closingPrice": "68,400",
+        "priceDifference": "400",
+        "openingPrice": "68,700",
+        "highPrice": "69,100",
+        "lowPrice": "68,200",
+        "tradingVolume": "11,625,959"
+    },
+    {
+        "date": "2023.10.20",
+        "closingPrice": "68,800",
+        "priceDifference": "700",
+        "openingPrice": "68,900",
+        "highPrice": "69,200",
+        "lowPrice": "68,100",
+        "tradingVolume": "15,204,495"
+    },
+    {
+        "date": "2023.10.19",
+        "closingPrice": "69,500",
+        "priceDifference": "1,000",
+        "openingPrice": "69,700",
+        "highPrice": "70,000",
+        "lowPrice": "69,400",
+        "tradingVolume": "13,985,012"
+    },
+    {
+        "date": "2023.10.18",
+        "closingPrice": "70,500",
+        "priceDifference": "1,100",
+        "openingPrice": "68,900",
+        "highPrice": "70,500",
+        "lowPrice": "68,800",
+        "tradingVolume": "16,493,184"
+    },
+    {
+        "date": "2023.10.17",
+        "closingPrice": "69,400",
+        "priceDifference": "2,100",
+        "openingPrice": "67,700",
+        "highPrice": "69,900",
+        "lowPrice": "67,400",
+        "tradingVolume": "17,299,253"
+    },
+    {
+        "date": "2023.10.16",
+        "closingPrice": "67,300",
+        "priceDifference": "700",
+        "openingPrice": "67,900",
+        "highPrice": "68,500",
+        "lowPrice": "66,800",
+        "tradingVolume": "12,599,299"
+    },
+    {
+        "date": "2023.10.13",
+        "closingPrice": "68,000",
+        "priceDifference": "900",
+        "openingPrice": "68,000",
+        "highPrice": "68,500",
+        "lowPrice": "67,700",
+        "tradingVolume": "9,724,086"
+    },
+    {
+        "date": "2023.10.12",
+        "closingPrice": "68,900",
+        "priceDifference": "700",
+        "openingPrice": "68,600",
+        "highPrice": "69,700",
+        "lowPrice": "68,200",
+        "tradingVolume": "19,311,380"
+    },
+    {
+        "date": "2023.10.11",
+        "closingPrice": "68,200",
+        "priceDifference": "1,800",
+        "openingPrice": "68,600",
+        "highPrice": "69,400",
+        "lowPrice": "67,900",
+        "tradingVolume": "25,209,349"
+    },
+    {
+        "date": "2023.10.10",
+        "closingPrice": "66,400",
+        "priceDifference": "400",
+        "openingPrice": "66,200",
+        "highPrice": "67,600",
+        "lowPrice": "66,200",
+        "tradingVolume": "19,889,202"
+    },
+    {
+        "date": "2023.10.06",
+        "closingPrice": "66,000",
+        "priceDifference": "700",
+        "openingPrice": "67,100",
+        "highPrice": "67,300",
+        "lowPrice": "66,000",
+        "tradingVolume": "14,386,527"
+    },
+    {
+        "date": "2023.10.05",
+        "closingPrice": "66,700",
+        "priceDifference": "800",
+        "openingPrice": "67,300",
+        "highPrice": "67,400",
+        "lowPrice": "66,700",
+        "tradingVolume": "16,108,313"
+    },
+    {
+        "date": "2023.10.04",
+        "closingPrice": "67,500",
+        "priceDifference": "900",
+        "openingPrice": "67,400",
+        "highPrice": "67,700",
+        "lowPrice": "66,700",
+        "tradingVolume": "23,361,149"
+    },
+    {
+        "date": "2023.09.27",
+        "closingPrice": "68,400",
+        "priceDifference": "200",
+        "openingPrice": "68,600",
+        "highPrice": "69,100",
+        "lowPrice": "68,200",
+        "tradingVolume": "14,886,491"
+    },
+    {
+        "date": "2023.09.26",
+        "closingPrice": "68,600",
+        "priceDifference": "800",
+        "openingPrice": "70,000",
+        "highPrice": "70,000",
+        "lowPrice": "68,400",
+        "tradingVolume": "13,143,470"
+    },
+    {
+        "date": "2023.09.25",
+        "closingPrice": "69,400",
+        "priceDifference": "600",
+        "openingPrice": "68,500",
+        "highPrice": "69,700",
+        "lowPrice": "68,500",
+        "tradingVolume": "13,582,516"
+    },
+    {
+        "date": "2023.09.22",
+        "closingPrice": "68,800",
+        "priceDifference": "100",
+        "openingPrice": "68,300",
+        "highPrice": "68,900",
+        "lowPrice": "68,300",
+        "tradingVolume": "9,897,840"
+    },
+    {
+        "date": "2023.09.21",
+        "closingPrice": "68,900",
+        "priceDifference": "700",
+        "openingPrice": "69,200",
+        "highPrice": "69,800",
+        "lowPrice": "68,800",
+        "tradingVolume": "10,796,336"
+    },
+    {
+        "date": "2023.09.20",
+        "closingPrice": "69,600",
+        "priceDifference": "200",
+        "openingPrice": "70,000",
+        "highPrice": "70,300",
+        "lowPrice": "69,500",
+        "tradingVolume": "10,873,015"
+    },
+    {
+        "date": "2023.09.19",
+        "closingPrice": "69,800",
+        "priceDifference": "400",
+        "openingPrice": "70,400",
+        "highPrice": "70,800",
+        "lowPrice": "69,600",
+        "tradingVolume": "11,820,188"
+    },
+    {
+        "date": "2023.09.18",
+        "closingPrice": "70,200",
+        "priceDifference": "1,800",
+        "openingPrice": "71,300",
+        "highPrice": "71,700",
+        "lowPrice": "70,200",
+        "tradingVolume": "16,040,727"
+    },
+    {
+        "date": "2023.09.15",
+        "closingPrice": "72,000",
+        "priceDifference": "300",
+        "openingPrice": "71,700",
+        "highPrice": "72,300",
+        "lowPrice": "71,400",
+        "tradingVolume": "17,823,512"
+    },
+    {
+        "date": "2023.09.14",
+        "closingPrice": "71,700",
+        "priceDifference": "800",
+        "openingPrice": "71,200",
+        "highPrice": "71,800",
+        "lowPrice": "70,800",
+        "tradingVolume": "21,041,407"
+    },
+    {
+        "date": "2023.09.13",
+        "closingPrice": "70,900",
+        "priceDifference": "400",
+        "openingPrice": "71,100",
+        "highPrice": "71,600",
+        "lowPrice": "70,300",
+        "tradingVolume": "15,955,797"
+    },
+    {
+        "date": "2023.09.12",
+        "closingPrice": "70,500",
+        "priceDifference": "300",
+        "openingPrice": "70,800",
+        "highPrice": "71,000",
+        "lowPrice": "70,400",
+        "tradingVolume": "11,688,599"
+    },
+    {
+        "date": "2023.09.11",
+        "closingPrice": "70,800",
+        "priceDifference": "500",
+        "openingPrice": "70,400",
+        "highPrice": "70,800",
+        "lowPrice": "70,000",
+        "tradingVolume": "11,785,462"
+    },
+    {
+        "date": "2023.09.08",
+        "closingPrice": "70,300",
+        "priceDifference": "100",
+        "openingPrice": "70,200",
+        "highPrice": "70,300",
+        "lowPrice": "69,600",
+        "tradingVolume": "10,688,118"
+    },
+    {
+        "date": "2023.09.07",
+        "closingPrice": "70,400",
+        "priceDifference": "400",
+        "openingPrice": "70,000",
+        "highPrice": "70,600",
+        "lowPrice": "69,600",
+        "tradingVolume": "13,741,241"
+    },
+    {
+        "date": "2023.09.06",
+        "closingPrice": "70,000",
+        "priceDifference": "700",
+        "openingPrice": "70,700",
+        "highPrice": "70,800",
+        "lowPrice": "69,700",
+        "tradingVolume": "11,414,620"
+    },
+    {
+        "date": "2023.09.05",
+        "closingPrice": "70,700",
+        "priceDifference": "500",
+        "openingPrice": "70,900",
+        "highPrice": "71,500",
+        "lowPrice": "70,200",
+        "tradingVolume": "12,330,239"
+    },
+    {
+        "date": "2023.09.04",
+        "closingPrice": "71,200",
+        "priceDifference": "200",
+        "openingPrice": "72,900",
+        "highPrice": "72,900",
+        "lowPrice": "70,700",
+        "tradingVolume": "26,286,495"
+    },
+    {
+        "date": "2023.09.01",
+        "closingPrice": "71,000",
+        "priceDifference": "4,100",
+        "openingPrice": "66,800",
+        "highPrice": "71,000",
+        "lowPrice": "66,700",
+        "tradingVolume": "29,738,235"
+    },
+    {
+        "date": "2023.08.31",
+        "closingPrice": "66,900",
+        "priceDifference": "200",
+        "openingPrice": "67,100",
+        "highPrice": "67,200",
+        "lowPrice": "66,400",
+        "tradingVolume": "15,964,630"
+    }
+]
