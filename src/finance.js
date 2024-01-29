@@ -31,13 +31,13 @@ async function decodeHTML(response) {
 }
 
 async function saveData(dailyPrices) {
-    fs.writeFileSync("../data/finance.json", JSON.stringify(dailyPrices));
+    fs.writeFileSync(filePath, JSON.stringify(dailyPrices));
 }
 
 // 랜덤한 밀리초(ms) 값 생성 함수
 function randomDelay() {
     const minDelay = 1000;
-    const maxDelay = 5000;
+    const maxDelay = 3000;
     return Math.floor(Math.random() * (maxDelay - minDelay + 1) + minDelay);
 }
 
@@ -60,10 +60,13 @@ async function fetchMain(url) {
             "src"
         );
 
-        let results = [];
-        const startPage = 1;
-        const endPage = 10;
+        if (!endPage) {
+            endPage = await fetchDailyPrice(baseUrl + dailySrc);
+        }
 
+        console.log(`${startPage} 부터 ${endPage} 까지 수집합니다..`);
+
+        let results = [];
         for (let page = startPage; page <= endPage; page++) {
             const url = baseUrl + dailySrc + `&page=${page}`;
             await delay(await randomDelay());
@@ -80,6 +83,19 @@ async function fetchDailyPrice(url) {
         let data = await decodeHTML(response);
         const $ = await cheerio.load(data);
         let dailyPrices = [];
+
+        // 마지막 페이지 설정
+        if (!endPage) {
+            const summary = "페이지 네비게이션 리스트";
+            const lastUrl = $(`table[summary='${summary}'] td.pgRR a`).prop(
+                "href"
+            );
+
+            // URLSearchParams를 사용하여 페이지 번호 추출
+            const params = new URLSearchParams(lastUrl);
+            return params.get("page");
+        }
+
         const tableRows = $("table.type2 tr").map((i, el) => {
             const row = $(el).find("td");
 
@@ -109,8 +125,12 @@ async function fetchDailyPrice(url) {
 }
 
 const code = "005930";
-
 const baseUrl = "https://finance.naver.com";
 const mainSrc = `/item/sise.naver?code=${code}`;
+const filePath = "../data/finance.json";
+
 const url = baseUrl + mainSrc;
+const startPage = 1;
+let endPage = 10; // 정하거나 없으면 기본적으로 맨 뒤 페이지까지 수집
+
 fetchMain(url);
