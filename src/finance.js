@@ -34,6 +34,19 @@ async function saveData(dailyPrices) {
     fs.writeFileSync("../data/finance.json", JSON.stringify(dailyPrices));
 }
 
+// 랜덤한 밀리초(ms) 값 생성 함수
+function randomDelay() {
+    const minDelay = 1000;
+    const maxDelay = 5000;
+    return Math.floor(Math.random() * (maxDelay - minDelay + 1) + minDelay);
+}
+
+// 비동기적으로 지연을 주는 함수
+function delay(ms) {
+    console.log(ms + "ms delay..");
+    return new Promise((resolve) => setTimeout(resolve, ms));
+}
+
 // 네이버페이 증권 시세 페이지 -> 일일 시세
 async function fetchMain(url) {
     const response = await fetchPage(url);
@@ -50,8 +63,10 @@ async function fetchMain(url) {
         let results = [];
         const startPage = 1;
         const endPage = 10;
+
         for (let page = startPage; page <= endPage; page++) {
             const url = baseUrl + dailySrc + `&page=${page}`;
+            await delay(await randomDelay());
             results = results.concat(await fetchDailyPrice(url));
         }
         await saveData(results);
