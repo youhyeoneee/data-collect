@@ -68,7 +68,7 @@ async function getPageData(url) {
             getPageData(baseUrl + next); // 재귀 호출
         }
 
-        fs.writeFileSync("./data/quote.json", JSON.stringify(quotes));
+        fs.writeFileSync("../data/quote.json", JSON.stringify(quotes));
     }
 }
 
