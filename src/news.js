@@ -4,14 +4,21 @@ import fs from "fs";
 import iconv from "iconv-lite";
 
 async function fetchPage(url) {
+    let config = {
+        responseType: "arraybuffer",
+        headers: {
+            "User-Agent":
+                "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/58.0.3029.110 Safari/537.3",
+        },
+    };
+
+    if (arguments.length > 1) {
+        const params = arguments[1];
+        config.params = params;
+    }
+
     try {
-        const response = await axios.get(url, {
-            responseType: "arraybuffer",
-            headers: {
-                "User-Agent":
-                    "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/58.0.3029.110 Safari/537.3",
-            },
-        });
+        const response = await axios.get(url, config);
         return response;
     } catch (error) {
         console.error(`Error fetching page: ${url}`, error.message);
@@ -56,70 +63,90 @@ async function getNewsDetail(result) {
     }
 }
 
+async function saveFile(filePath, result) {
+    fs.writeFileSync(filePath, JSON.stringify(result));
+}
+
 async function getNewsInfo(url) {
-    const response = await fetchPage(url);
-    if (response) {
-        const $ = cheerio.load(response.data);
-        const newsList = await Promise.all(
-            $(".list_news li.bx")
-                .map(async (i, el) => {
-                    console.log("============");
-                    const target = $(el);
+    let results = [];
+    for (let page = startPage; page < endPage; page++) {
+        console.log(`${page} 수집 ========= `);
 
-                    // 제목
-                    const title = target.find("a.news_tit").prop("title");
+        const params = {
+            where: "news",
+            query: keyword,
+            start: page * 10 + 1,
+        };
 
-                    console.log(title);
-                    // 신문사
-                    const press = target
-                        .find(".news_info")
-                        .find(".info.press")
-                        .clone() // .clone()를 추가하여 원본 요소를 수정하지 않고 복제본을 사용합니다.
-                        .find("i")
-                        .remove() // i 태그를 제거합니다.
-                        .end() // .clone() 이전 상태로 돌아갑니다.
-                        .text()
-                        .trim();
+        const response = await fetchPage(url, params);
+        if (response) {
+            const $ = cheerio.load(response.data);
+            const newsList = await Promise.all(
+                $(".list_news li.bx")
+                    .map(async (i, el) => {
+                        console.log("============");
+                        const target = $(el);
 
-                    console.log(press);
+                        // 제목
+                        const title = target.find("a.news_tit").prop("title");
 
-                    // 요약 설명
-                    const text = target
-                        .find(".api_txt_lines.dsc_txt_wrap")
-                        .text();
-                    console.log(text);
+                        console.log(title);
+                        // 신문사
+                        const press = target
+                            .find(".news_info")
+                            .find(".info.press")
+                            .clone() // .clone()를 추가하여 원본 요소를 수정하지 않고 복제본을 사용합니다.
+                            .find("i")
+                            .remove() // i 태그를 제거합니다.
+                            .end() // .clone() 이전 상태로 돌아갑니다.
+                            .text()
+                            .trim();
 
-                    // 이미지
-                    const imgTag = target.find("a.dsc_thumb").find("img.thumb");
-                    let imgUrl, imgPath;
-                    if (imgTag) {
-                        imgUrl = imgTag.prop("data-lazysrc");
-                        imgPath = await getNewsImage(imgUrl, i);
-                    }
+                        console.log(press);
 
-                    // 링크
-                    const link = target.find("a.dsc_thumb").prop("href");
-                    console.log(link);
+                        // 요약 설명
+                        const text = target
+                            .find(".api_txt_lines.dsc_txt_wrap")
+                            .text();
+                        console.log(text);
 
-                    let result = {
-                        id: i,
-                        title: title,
-                        press: press,
-                        text: text,
-                        imgUrl: imgUrl,
-                        imgPath: imgPath,
-                        link: link,
-                    };
+                        const id = page * 10 + i;
+                        // 이미지
+                        const imgTag = target
+                            .find("a.dsc_thumb")
+                            .find("img.thumb");
+                        let imgUrl, imgPath;
+                        if (imgTag) {
+                            imgUrl = imgTag.prop("data-lazysrc");
+                            imgPath = await getNewsImage(imgUrl, id);
+                        }
 
-                    await getNewsDetail(result);
+                        // 링크
+                        const link = target.find("a.dsc_thumb").prop("href");
+                        console.log(link);
 
-                    return result;
-                })
-                .get()
-        );
+                        let result = {
+                            id: id,
+                            title: title,
+                            press: press,
+                            text: text,
+                            imgUrl: imgUrl,
+                            imgPath: imgPath,
+                            link: link,
+                        };
 
-        fs.writeFileSync("../data/news.json", JSON.stringify(newsList));
+                        await getNewsDetail(result);
+
+                        return result;
+                    })
+                    .get()
+            );
+
+            results = results.concat(newsList);
+        }
     }
+
+    saveFile(filePath, results);
 }
 
 async function getNewsImage(url, id) {
@@ -135,5 +162,8 @@ async function getNewsImage(url, id) {
 }
 
 const keyword = "이차전지";
-const url = `https://search.naver.com/search.naver?where=news&sm=tab_jum&query=${keyword}`;
+const url = `https://search.naver.com/search.naver?where=news`;
+const filePath = "../data/news.json";
+const startPage = 0;
+const endPage = 5;
 getNewsInfo(url);
