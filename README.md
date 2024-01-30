@@ -66,7 +66,7 @@ const endPage = 5;
     -   이미지 저장 경로(imgPath)
     -   링크(link)
     -   상세 페이지 html(newsDetail)
--   data/news/${id}.img
+-   data/news/${id}.jpeg
     -   뉴스 id = 이미지 파일명
 
 ## 3. 네이버 주가 데이터 - 일별 시세
@@ -135,3 +135,4 @@ const data = { startNum: 0, order: "recommend", limit: 48 };
 ### 데이터
 
 -   data/wadiz.json
+-   data/wadiz/${campaignId}.jpeg
