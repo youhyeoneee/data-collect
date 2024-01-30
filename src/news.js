@@ -5,14 +5,13 @@ import iconv from "iconv-lite";
 
 async function fetchPage(url) {
     try {
-        const header = arguments[1];
-        let response;
-        if (header) {
-            response = await axios.get(url, header);
-        } else {
-            response = await axios.get(url);
-        }
-
+        const response = await axios.get(url, {
+            responseType: "arraybuffer",
+            headers: {
+                "User-Agent":
+                    "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/58.0.3029.110 Safari/537.3",
+            },
+        });
         return response;
     } catch (error) {
         console.error(`Error fetching page: ${url}`, error.message);
@@ -20,20 +19,38 @@ async function fetchPage(url) {
     }
 }
 
+async function fetchFile(url) {
+    try {
+        const response = await axios.get(url, {
+            responseType: "stream",
+            headers: {
+                "User-Agent":
+                    "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/58.0.3029.110 Safari/537.3",
+            },
+        });
+        return response;
+    } catch (error) {
+        console.error(`Error fetching page: ${url}`, error.message);
+        return null;
+    }
+}
+
+async function decodeHTML(response) {
+    let contentType = response.headers["content-type"];
+    let charset = contentType.includes("charset=")
+        ? contentType.split("charset=")[1]
+        : "UTF-8";
+
+    let responseData = await response.data;
+
+    return iconv.decode(responseData, charset);
+}
+
 async function getNewsDetail(result) {
-    const header = { responseType: "arraybuffer" };
-    const response = await fetchPage(result.link, header);
+    const response = await fetchPage(result.link);
 
     if (response) {
-        let contentType = response.headers["content-type"];
-        let charset = contentType.includes("charset=")
-            ? contentType.split("charset=")[1]
-            : "UTF-8";
-
-        let responseData = await response.data;
-
-        let data = iconv.decode(responseData, charset);
-
+        let data = await decodeHTML(response);
         const $ = await cheerio.load(data);
         result.newsDetail = $.html();
     }
@@ -74,9 +91,10 @@ async function getNewsInfo(url) {
 
                     // 이미지
                     const imgTag = target.find("a.dsc_thumb").find("img.thumb");
-                    let img;
+                    let imgUrl, imgPath;
                     if (imgTag) {
-                        img = imgTag.prop("data-lazysrc");
+                        imgUrl = imgTag.prop("data-lazysrc");
+                        imgPath = await getNewsImage(imgUrl, i);
                     }
 
                     // 링크
@@ -84,10 +102,12 @@ async function getNewsInfo(url) {
                     console.log(link);
 
                     let result = {
+                        id: i,
                         title: title,
                         press: press,
                         text: text,
-                        img: img,
+                        imgUrl: imgUrl,
+                        imgPath: imgPath,
                         link: link,
                     };
 
@@ -98,8 +118,20 @@ async function getNewsInfo(url) {
                 .get()
         );
 
-        fs.writeFileSync("./data/news.json", JSON.stringify(newsList));
+        fs.writeFileSync("../data/news.json", JSON.stringify(newsList));
     }
+}
+
+async function getNewsImage(url, id) {
+    const response = await fetchFile(url);
+    let name = `../data/news/${id}.jpeg`;
+    let file = fs.createWriteStream(name);
+
+    if (response) {
+        response.data.pipe(file);
+    }
+
+    return name;
 }
 
 const keyword = "이차전지";
