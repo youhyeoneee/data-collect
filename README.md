@@ -48,10 +48,11 @@ src/quotesToScrape.js
 
 ### 기능
 
-`키워드(keyword)` 로 검색된 1페이지 수집
+`키워드(keyword)` 로 검색된 1페이지부터 `endPage` 페이지까지 수집
 
 ```js
 const keyword = "이차전지";
+const endPage = 5;
 ```
 
 ### 데이터
