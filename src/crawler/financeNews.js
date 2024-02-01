@@ -2,6 +2,8 @@ import axios from "axios";
 import * as cheerio from "cheerio";
 import fs from "fs";
 import iconv from "iconv-lite";
+import path from "path";
+import { dataPath } from "../config.js";
 
 async function fetchPage(url) {
     try {
@@ -120,6 +122,6 @@ const mainSrc = `/item/news.nhn?code=${code}`;
 const url = baseUrl + mainSrc;
 
 const startPage = 1;
-const filePath = "../data/finance-news.json";
+const filePath = path.join(dataPath, "finance-news.json");
 let endPage = 10; // 정하거나 없으면 기본적으로 맨 뒤 페이지까지 수집
 fetchMain(url);

@@ -2,6 +2,8 @@ import axios from "axios";
 import * as cheerio from "cheerio";
 import fs from "fs";
 import iconv from "iconv-lite";
+import path from "path";
+import { dataPath } from "../config.js";
 
 async function fetchPage(url) {
     try {
@@ -127,7 +129,7 @@ async function fetchDailyPrice(url) {
 const code = "005930";
 const baseUrl = "https://finance.naver.com";
 const mainSrc = `/item/sise.naver?code=${code}`;
-const filePath = "../data/finance.json";
+const filePath = path.join(dataPath, "finance.json");
 
 const url = baseUrl + mainSrc;
 const startPage = 1;

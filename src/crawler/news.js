@@ -2,6 +2,9 @@ import axios from "axios";
 import * as cheerio from "cheerio";
 import fs from "fs";
 import iconv from "iconv-lite";
+import path from "path";
+
+import { dataPath } from "../config.js";
 
 async function fetchPage(url) {
     let config = {
@@ -151,19 +154,20 @@ async function getNewsInfo(url) {
 
 async function getNewsImage(url, id) {
     const response = await fetchFile(url);
-    let name = `../data/news/${id}.jpeg`;
+    const name = path.join(dataPath, "news", `${id}.jpeg`);
+    const name2 = path.join("data", "news", `${id}.jpeg`);
     let file = fs.createWriteStream(name);
 
     if (response) {
         response.data.pipe(file);
     }
 
-    return name;
+    return name2;
 }
 
 const keyword = "이차전지";
 const url = `https://search.naver.com/search.naver?where=news`;
-const filePath = "../data/news.json";
+const filePath = path.join(dataPath, "news.json");
 const startPage = 0;
 const endPage = 5;
 getNewsInfo(url);

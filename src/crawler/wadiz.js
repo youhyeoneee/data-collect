@@ -1,5 +1,6 @@
 import axios from "axios";
 import fs from "fs";
+import { dataPath } from "../config.js";
 
 async function fetchPage(url) {
     try {
@@ -69,5 +70,5 @@ const baseUrl = "https://service.wadiz.kr/api/search/funding";
 const url = baseUrl;
 const data = { startNum: 0, order: "recommend", limit: 48 };
 
-const filePath = "../data/wadiz.json";
+const filePath = path.join(dataPath, "wadiz.json");
 fetchMain(url);
