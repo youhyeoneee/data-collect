@@ -22,7 +22,7 @@ node @@@.js # 원하는 데이터 수집 파일 실행
 
 ### 소스 코드
 
-src/quotesToScrape.js
+src/crawler/quotesToScrape.js
 
 ### 기능
 
@@ -44,7 +44,7 @@ src/quotesToScrape.js
 
 ### 소스 코드
 
-src/quotesToScrape.js
+src/crawler/news.js
 
 ### 기능
 
@@ -73,7 +73,7 @@ const endPage = 5;
 
 ### 소스 코드
 
-src/finance.js
+src/crawler/finance.js
 
 ### 기능
 
@@ -99,7 +99,7 @@ let endPage = 10; // 정하거나 없으면 기본적으로 맨 뒤 페이지까
 
 ### 소스 코드
 
-src/financeNews.js
+src/crawler/financeNews.js
 
 ### 기능
 
@@ -122,7 +122,7 @@ let endPage = 10; // 정하거나 없으면 기본적으로 맨 뒤 페이지까
 
 ### 소스 코드
 
-src/wadiz.js
+src/crawler/wadiz.js
 
 ### 기능
 
